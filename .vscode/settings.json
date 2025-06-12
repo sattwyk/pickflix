@@ -1,8 +1,8 @@
 {
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"editor.defaultFormatter": "biomejs.biome",
-	"editor.codeActionsOnSave": {
-		"quickfix.biome": "explicit"
-	},
-	"css.lint.unknownAtRules": "ignore"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit"
+  },
+  "css.lint.unknownAtRules": "ignore"
 }
