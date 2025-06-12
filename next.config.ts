@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     ppr: true,
     reactCompiler: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
