@@ -16,11 +16,8 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"formatWithErrors": false,
-		"ignore": [],
-		"indentStyle": "tab",
-		"lineEnding": "lf",
-		"lineWidth": 100
+		"indentStyle": "space",
+		"indentWidth": 2
 	},
 	"javascript": {
 		"formatter": {
