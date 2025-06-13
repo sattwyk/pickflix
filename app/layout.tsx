@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ReactScan } from '@/components/react-scan';
+import { ThemeProvider } from '@/components/theme-provider';
 import { ClerkProvider, GoogleOneTap } from '@clerk/nextjs';
 
 const geistSans = Geist({
@@ -25,14 +26,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <ReactScan />
       <ClerkProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <GoogleOneTap />
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <GoogleOneTap />
+            {children}
+          </ThemeProvider>
         </body>
       </ClerkProvider>
     </html>
